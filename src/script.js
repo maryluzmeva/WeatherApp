@@ -65,7 +65,7 @@ function retrievePosition(position) {
   let latitude =position.coords.latitude;
   let longitude = position.coords.longitude;
   let units = "metric";
-  let apiKey = "3faac5a862ce9260b63bd4aaae035e7c";
+  let apiKey = "c71f439f65td859373faeeba102o0222";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl= `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showWeather);
