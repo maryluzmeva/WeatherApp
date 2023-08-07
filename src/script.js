@@ -1,4 +1,3 @@
-
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -9,30 +8,28 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-let daysIndex = date.getDay ();
-let days = [
-  "Sun", 
-  "Mon",
-  "Tue", 
-  "Wed", 
-  "Thu", 
-  "Fri", 
-  "Sat"
-];
+  let dayIndex = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[dayIndex];
 
-let day = days [daysIndex];
-
-return `${day} ${hours}: ${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function displayWeatherCondition(response) {
-  document.querySelector("#city").innerHTML = response.city;
-  console.log (response.city);
+  document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature
   );
 
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML = response.temperature.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
@@ -42,7 +39,7 @@ function displayWeatherCondition(response) {
 
 function searchCity(city) {
   let apiKey = "c71f439f65td859373faeeba102o0222";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&apikey=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -54,7 +51,7 @@ function handleSubmit(event) {
 
 function searchLocation(position) {
   let apiKey = "c71f439f65td859373faeeba102o0222";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon={lon}&lat={lat}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon={lon}&lat={lat}&apikey=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayWeatherCondition);
 }
@@ -80,7 +77,7 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-let searchForm = document.querySelector("#search-input");
+let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
