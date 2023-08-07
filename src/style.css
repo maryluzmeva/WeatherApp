@@ -4,7 +4,7 @@
           width: auto;
           border: 5px outset rgba(221, 190, 169, 0.7);
           border-radius: 20px;
-          width: 950px;
+          width: 800px;
 }
 
 h1 {
@@ -24,21 +24,9 @@ h2
           display: block;
 }
 
-.searchButton {
-          font-family: "Karla", sans-serif;
-          font-weight: 700px;
-          font-size: 14px;
-          text-transform: uppercase;
-          position: static;
-          top: 10px;
-          padding: 10px 15px;
-          margin: auto 0;
-          border-radius: 8px;
-}
 
-form {
-          display: block;
-          text-align: center;
+.search-form {
+          text-align: right;
           padding-top: 20px;
           padding-bottom: 15px;
 }
@@ -49,11 +37,6 @@ form {
           color: #eee2df;
           display: block;
           font-size: 50px;
-}
-
-.grades-units {
-          display: block;
-          text-align: center;
 }
 
 #date {
@@ -69,12 +52,6 @@ form {
           font-family: "Karla", sans-serif;
 }
 
-#weatherData {
-          text-align: center;
-          display: block;
-          font-family: "Karla", sans-serif;
-          font-size: 56px;
-}
 
 .gitHub-link {
           text-align: center;
@@ -82,3 +59,20 @@ form {
           font-family: "Karla", sans-serif;
           font-size: 18px;
 }
+
+.form-control {
+          font-weight: 600;
+          color: white;
+          background:#c89f9c ;
+          border-color: #eee2df;
+          font-family: "Karla", sans-serif;
+}
+
+.btn-primary {
+          font-weight: 600;
+          color:#eee2df;
+          background:#c89f9c;
+          font-family: "Karla", sans-serif;
+
+}
+
