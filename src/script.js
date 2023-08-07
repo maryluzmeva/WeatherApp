@@ -49,28 +49,21 @@ function searchLocation(position) {
 
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 84;
-}
 
-function convertToCelsius (event) {
+function getCurrentLocation (event) {
   event.preventDefault ();
-  let temperature =document.querySelector ("#temperature");
-  temperature.innerHTML =29;
+  navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-let date =document.querySelector ("#date");
+let dateElement =document.querySelector ("#date");
 let currentTime = new Date ();
 date.innerHTML = showDate (currentTime);
 
-let fahrenheitConvert = document.querySelector("#fahrenheit-convert");
-fahrenheitConvert.addEventListener("click", convertToFahrenheit);
+let currentLocationButton =document.querySelector ("#current-location-button");
+currentLocationButton.addEventListener ("click", getCurrentLocation);
 
-let celsiusConvert = document.querySelector("#celsius-convert");
-celsiusConvert.addEventListener("click", convertToCelsius);
+searchCity ("Madrid");
 
 
-navigator.geolocation.getCurrentPosition (retrievePosition);
+
 
