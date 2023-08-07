@@ -16,6 +16,12 @@ h1 {
           border-radius: 35px;
 }
 
+h2,
+h4,
+h5 {
+          text-align: center;
+}
+
 h3 {
           font-family: "Karla", sans-serif;
           font-size: 25px;
@@ -49,6 +55,28 @@ form {
           padding-bottom: 20px;
 }
 
+.col-2 {
+          text-align: center;
+          margin: 0 auto;
+          padding: 6px;
+          background-color: #eed7c5;
+          border-radius: 14px;
+          border-color: #b36a5e;
+}
+
+.emoji {
+          text-align: left;
+          color: #cb997e;
+          font-size: 24px;
+}
+
+.icon-weather {
+          text-align: center;
+          color: #eee2df;
+          display: block;
+          font-size: 50px;
+}
+
 .grades-units {
           display: block;
           text-align: center;
@@ -59,4 +87,17 @@ form {
           text-align: center;
           font-family: "Karla", sans-serif;
           font-size: 20px;
+}
+
+.temperature {
+          display: block;
+          text-align: center;
+          font-family: "Karla", sans-serif;
+}
+
+#weatherData {
+          text-align: center;
+          display: block;
+          font-family: "Karla", sans-serif;
+          font-size: 56px;
 }
