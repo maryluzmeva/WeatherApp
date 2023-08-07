@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Martel:wght@200;300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,61 +27,48 @@
   <body>
     <div class="container">
       <h1>
+        <img
+          src="images/weather-forecast.png"
+          width="40px"
+          alt="forecast icon"
+        />
         Weather Forecast
       </h1>
       <br />
-      <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-6">
-              <input
-                type="search"
-                placeholder="Type a city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3" id="searchButton">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm w-100"
-              />
-            </div>
-            <div class="col-3">
-              <button
-                class="btn btn-success w-100"
-                id="current-location-button">
-                Current
-              </button>
-            </div>
-          </div>
-        </form>
-        <h1 id="city"></h1>
-        <ul>
-          <li id="date"></li>
-          <li id="description"></li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <div class="float-left">
-                <span class="temperature" id="temperature"></span
-                ><span class="units">°C</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span> km/h</li>
-            </ul>
-          </div>
-        </div>
+      <div>
+        <input
+          type="text"
+          placeholder="Enter location"
+          autocomplete="off"
+          autofocus="on"
+          id="searchInput"
+        />
+        <button id="searchButton">Current Location</button>
       </div>
+      <br />
+      <div id="weatherData">
+        <h2>Current</h2>
+      </div>
+      <br />
+      <span class="icon-weather">
+        <i class="bi bi-sun-fill"></i>
+      </span>
+
+      <br />
+
+      <span class="grades-units">
+        <a href="#" id="celsius-convert">°C</a>|<a
+          href="#"
+          id="fahrenheit-convert"
+          >°F</a
+        >
+      </span>
+
+      <br />
+
+      <span id="date"> </span>
+
+      <hr />
     </div>
     <p>
       <a href="https://github.com/maryluzmeva/WeatherApp">GitHub Repository</a>
