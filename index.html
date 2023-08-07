@@ -27,122 +27,63 @@
   <body>
     <div class="container">
       <h1>
-        <img
-          src="images/weather-forecast.png"
-          width="40px"
-          alt="forecast icon"
-        />
         Weather Forecast
       </h1>
       <br />
-      <div>
-        <input
-          type="search"
-          placeholder="Enter location"
-          autocomplete="off"
-          autofocus="on"
-          id="city-input"
-          class="form-control shadow-sm"
-        />
-        <button class="btn btn=bg-success w-100" id="current-location-button">
-          Current
-        </button>
-      </div>
-      <br />
-      <div id="weatherData">
-        <h2>Current</h2>
-      </div>
-      <br />
-      <span class="icon-weather">
-        <i class="bi bi-sun-fill"></i>
-      </span>
-
-      <br />
-
-      <span class="grades-units">
-        <a href="#" id="celsius-convert">°C</a>|<a
-          href="#"
-          id="fahrenheit-convert"
-          >°F</a
-        >
-      </span>
-
-      <br />
-
-      <span id="date"> </span>
-
-      <hr />
-
-      <h3>5 Days Forecast</h3>
-
-      <div class="row">
-        <div class="col-2">
-          <strong> Tomorrow </strong>
-          <br />
-          <span class="emoji">
-            <i class="bi bi-cloud-lightning-rain"></i>
-          </span>
-          High:17&deg;
-          <br />
-          <span class="emoji">
-            <i class="bi bi-cloud-sun-fill"></i>
-          </span>
-          Low:19&deg;
-        </div>
-
-        <div class="col-2">
-          <strong>Sunday</strong>
-          <br />
-          <span class="emoji">
-            <i class="bi bi-sun-fill"></i>
-          </span>
-          High:29&deg;
-          <br />
-          <span class="emoji">
-            <i class="bi bi-cloud-rain-heavy-fill"></i>
-          </span>
-
-          Low:15&deg;
-        </div>
-
-        <div class="col-2">
-          <strong>Monday</strong>
-          <br />
-          <span class="emoji">
-            <i class="bi bi-moon-stars-fill"></i>
-          </span>
-          High:29&deg;
-          <br />
-          <span class="emoji">
-            <i class="bi bi-cloud-rain-heavy-fill"></i>
-          </span>
-          Low:15&deg;
-        </div>
-        <div class="col-2">
-          <strong>Tuesday</strong>
-          <br />
-          <span class="emoji">
-            <i class="bi bi-cloud-rain-heavy-fill"></i>
-          </span>
-          High:16&deg;
-          <br />
-          <span class="emoji">
-            <i class="bi bi-moon-stars-fill"></i>
-          </span>
-          Low:15&deg;
-        </div>
-        <div class="col-2">
-          <strong>Wednesday</strong>
-          <br />
-          <span class="emoji"> <i class="bi bi-moon-stars-fill"></i></span>
-          High:29&deg;
-          <br />
-          <span class="emoji"><i class="bi bi-cloud-rain-heavy-fill"></i></span>
-          Low:15&deg;
+      <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1 id="city"></h1>
+        <ul>
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span
+                ><span class="units">°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <p>
       <a href="https://github.com/maryluzmeva/WeatherApp">GitHub Repository</a>
     </p>
