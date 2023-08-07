@@ -101,3 +101,8 @@ form {
           font-family: "Karla", sans-serif;
           font-size: 56px;
 }
+
+.gitHub-link {
+          text-align: center;
+          display:block;
+}
