@@ -24,13 +24,9 @@ let day = days [daysList];
 return `${day} ${hours}: ${minutes}`;
 }
 
-function search(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city");
-  let input =document.querySelector("#search-form input");
-  city.innerHTML = input.value;
-  let formElement = document.querySelector ("form");
-  formElement.addEventListener ("submit", search);
+function displayWeatherCondition (response){
+  document.querySelector ("#city").innerHTML=response.data.name;
+  document.querySelector ("#temperature").innerHTML=Math.round (response.data.main.temp);
 }
 
 function convertToFahrenheit(event) {
