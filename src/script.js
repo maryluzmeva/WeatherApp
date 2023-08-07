@@ -39,8 +39,15 @@ function searchCity (city) {
 
 function handleSubmit (event) {
   event.preventDefault ();
-  let city=document.querySelector ("#city-input").ariaValueMax;
+  let city=document.querySelector ("#city-input").value;
   searchCity (city);
+}
+
+function searchLocation(position) {
+  let apiKey = "3faac5a862ce9260b63bd4aaae035e7c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 function convertToFahrenheit(event) {
   event.preventDefault();
