@@ -25,6 +25,9 @@ let day = days [daysList];
 return `${day} ${hours}: ${minutes}`;
 }
 
+function displayWeatherCondition (response) {
+  document.querySelector ("#city").innerHTML = response.data.city;
+}
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#city");
