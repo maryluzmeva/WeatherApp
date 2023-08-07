@@ -25,54 +25,64 @@ let day = days [daysList];
 return `${day} ${hours}: ${minutes}`;
 }
 
-function displayWeatherCondition (response) {
-  document.querySelector ("#city").innerHTML = response.data.city;
+function displayWeatherCondition(response) {
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
 }
-function search(event) {
+
+function searchCity(city) {
+  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city");
-  let input =document.querySelector("#search-form input");
-  city.innerHTML = input.value;
-  let formElement = document.querySelector ("form");
-  formElement.addEventListener ("submit", search);
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
+function searchLocation(position) {
+  let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 84;
+  temperatureElement.innerHTML = 66;
 }
 
-function convertToCelsius (event) {
-  event.preventDefault ();
-  let temperature =document.querySelector ("#temperature");
-  temperature.innerHTML =29;
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = 19;
 }
 
-let date =document.querySelector ("#date");
-let currentTime = new Date ();
-date.innerHTML = showDate (currentTime);
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
 
-let fahrenheitConvert = document.querySelector("#fahrenheit-convert");
-fahrenheitConvert.addEventListener("click", convertToFahrenheit);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
-let celsiusConvert = document.querySelector("#celsius-convert");
-celsiusConvert.addEventListener("click", convertToCelsius);
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
-function showWeather (response) {
-  let temperature = Math.round (response.data.main.temp);
-  let weatherData = document.querySelector ("#weatherData");
-  weatherData.innerHTML =`${response.data.name}<br />${temperature}°C`;
-}
-function retrievePosition(position) {
-  let lat =position.coords.latitude;
-  let lon = position.coords.longitude;
-  let units = "metric";
-  let apiKey = "c71f439f65td859373faeeba102o0222";
-  let apiUrl= `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}query={query}&key=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showWeather);
-}
-navigator.geolocation.getCurrentPosition (retrievePosition);
-
-let searchButton =document.querySelector ("#searchButton");
-searchButton.addEventListener("click", searchButton);
+searchCity("New York");
