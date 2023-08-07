@@ -36,6 +36,12 @@ function searchCity (city) {
   let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get (apiUrl).then(displayWeatherCondition);
 }
+
+function handleSubmit (event) {
+  event.preventDefault ();
+  let city=document.querySelector ("#city-input").ariaValueMax;
+  searchCity (city);
+}
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");

@@ -26,39 +26,46 @@
 
   <body>
     <div class="container">
-      <h1>Weather Forecast</h1>
-      <br />
-      <div>
-        <input
-          type="text"
-          placeholder="Enter location"
-          autocomplete="off"
-          autofocus="on"
-          id="search-form input"
-        />
-        <button id="searchButton">Current Location</button>
+      <div class="weather-app">
+        <h1>Weather Forecast</h1>
+        <br />
+        <form class="search=form" id="search-form">
+          <div>
+            <input
+              type="search"
+              placeholder="Enter location"
+              autocomplete="off"
+              autofocus="on"
+              id="city-input"
+              class="form-control shadow-sm"
+            />
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-primary"
+            />
+            <button id="searchButton">Current Location</button>
+          </div>
+          <br />
+          <div id="city"></div>
+          <br />
+          <span class="icon-weather">
+            <i class="bi bi-sun-fill"></i>
+          </span>
+        </form>
+        <br />
+
+        <span class="grades-units">
+          <a href="#" id="celsius-convert">°C</a>|<a
+            href="#"
+            id="fahrenheit-convert"
+            >°F</a
+          >
+        </span>
+
+        <br />
+        <span id="date"> </span>
       </div>
-      <br />
-      <div id="weatherData">
-        <h2>Current</h2>
-      </div>
-      <br />
-      <span class="icon-weather">
-        <i class="bi bi-sun-fill"></i>
-      </span>
-
-      <br />
-
-      <span class="grades-units">
-        <a href="#" id="celsius-convert">°C</a>|<a
-          href="#"
-          id="fahrenheit-convert"
-          >°F</a
-        >
-      </span>
-
-      <br />
-      <span id="date"> </span>
     </div>
     <footer>
       <p class="gitHub-link">
