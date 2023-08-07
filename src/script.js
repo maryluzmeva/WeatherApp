@@ -62,12 +62,11 @@ function showWeather (response) {
   weatherData.innerHTML =`${response.data.name}<br />${temperature}°C`;
 }
 function retrievePosition(position) {
-  let latitude =position.coords.latitude;
-  let longitude = position.coords.longitude;
+  let lat =position.coords.latitude;
+  let lon = position.coords.longitude;
   let units = "metric";
   let apiKey = "c71f439f65td859373faeeba102o0222";
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiUrl= `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  let apiUrl= `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}query={query}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showWeather);
 }
 navigator.geolocation.getCurrentPosition (retrievePosition);
