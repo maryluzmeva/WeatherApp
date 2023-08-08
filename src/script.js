@@ -28,7 +28,7 @@ return `${day} ${hours}: ${minutes}`;
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#city");
-  let input =document.querySelector("#search-form input");
+  let input =document.querySelector("#search");
   city.innerHTML = input.value;
   let formElement = document.querySelector ("form");
   formElement.addEventListener ("submit", search);
