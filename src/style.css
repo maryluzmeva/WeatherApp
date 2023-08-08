@@ -4,7 +4,7 @@
           width: auto;
           border: 5px outset rgba(221, 190, 169, 0.7);
           border-radius: 20px;
-          width: 800px;
+          width: 950px;
 }
 
 h1 {
@@ -16,21 +16,59 @@ h1 {
           border-radius: 35px;
 }
 
-h2 
-          {text-align: center;
+h2,
+h4,
+h5 {
+          text-align: center;
+}
+
+h3 {
           font-family: "Karla", sans-serif;
           font-size: 25px;
           text-align: center;
           display: block;
 }
 
-
-.search-form {
-          text-align: right;
-          padding-top: 20px;
-          padding-bottom: 15px;
+h5 {
+          font-family: "Karla", sans-serif;
+          font-size: 18px;
+          display: block;
+          padding: 6px;
 }
 
+.searchButton {
+          font-family: "Karla", sans-serif;
+          font-weight: 700px;
+          font-size: 14px;
+          text-transform: uppercase;
+          position: static;
+          top: 10px;
+          padding: 10px 15px;
+          margin: auto 0;
+          border-radius: 8px;
+}
+
+form {
+          display: block;
+          text-align: center;
+          padding-top: 20px;
+          padding-bottom: 20px;
+}
+
+.col-2 {
+          text-align: center;
+          margin: 0 auto;
+          padding: 6px;
+          background-color: #eed7c5;
+          border-radius: 14px;
+          border-color: #b36a5e;
+}
+
+.emoji {
+          text-align: left;
+          color: #cb997e;
+          font-size: 24px;
+}
 
 .icon-weather {
           text-align: center;
@@ -39,11 +77,16 @@ h2
           font-size: 50px;
 }
 
+.grades-units {
+          display: block;
+          text-align: center;
+}
+
 #date {
           display: block;
           text-align: center;
           font-family: "Karla", sans-serif;
-          font-size: 26px;
+          font-size: 20px;
 }
 
 .temperature {
@@ -52,27 +95,9 @@ h2
           font-family: "Karla", sans-serif;
 }
 
-
-.gitHub-link {
+#weatherData {
           text-align: center;
-          display:block;
+          display: block;
           font-family: "Karla", sans-serif;
-          font-size: 18px;
+          font-size: 56px;
 }
-
-.form-control {
-          font-weight: 600;
-          color: white;
-          background:#c89f9c ;
-          border-color: #eee2df;
-          font-family: "Karla", sans-serif;
-}
-
-.btn-primary {
-          font-weight: 600;
-          color:#eee2df;
-          background:#c89f9c;
-          font-family: "Karla", sans-serif;
-
-}
-
