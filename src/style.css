@@ -36,7 +36,7 @@ h5 {
           padding: 6px;
 }
 
-.search {
+#search {
           font-family: "Karla", sans-serif;
           font-weight: 700px;
           font-size: 14px;
@@ -46,7 +46,7 @@ h5 {
           padding: 10px 15px;
           margin: auto 0;
           border-radius: 8px;
-          color:#c89f9c;
+          color:black;
           background-color: #eee2df;
           border-radius: 14px;
 }
@@ -103,4 +103,11 @@ form {
           display: block;
           font-family: "Karla", sans-serif;
           font-size: 56px;
+}
+
+#author {
+          text-align: center;
+          display:block;
+          font-family: "Karla", sans-serif;
+          font-size: 14px;
 }
