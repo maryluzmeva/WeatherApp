@@ -29,14 +29,20 @@
       <h1>Weather Forecast</h1>
       <br />
       <div>
+        <form action="submit">
         <input
           type="text"
+          name="searchInput"
+          id="searchInput"
           placeholder="Enter location"
           autocomplete="off"
-          autofocus="on"
-          id="searchInput"
-        />
-        <button id="search">Search</button>
+          autofocus="on">
+          <button id="search">Search</button>
+        </form>
+          
+      
+      </div>
+        
         <button id="currentLocation">Current Location</button>
       </div>
       <br />
