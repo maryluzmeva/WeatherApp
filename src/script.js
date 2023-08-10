@@ -58,7 +58,7 @@ celsiusConvert.addEventListener("click", convertToCelsius);
 
 function showWeather (response) {
   let temperature = Math.round (response.data.main.temp);
-  let weatherData = document.querySelector ("#weatherData");
+  let weatherData = document.querySelector ("#weather-data");
   weatherData.innerHTML =`${response.data.name}<br />${temperature}°C`;
 }
 function retrievePosition(position) {

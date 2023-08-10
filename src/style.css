@@ -3,7 +3,7 @@
           font-family: "Martel", serif;
           border: 5px outset rgba(221, 190, 169, 0.7);
           border-radius: 20px;
-          margin: 0 auto;
+          margin: 30px auto;
           padding: 20px;
           max-width: 600px;
 }
@@ -17,7 +17,7 @@ h1 {
           border-radius: 35px;
 }
 
-h2 {
+#weather-data {
           font-family: "Martel", sans-serif;
           font-size: 30px;
           display:block;
@@ -95,11 +95,11 @@ ul {
 #weather-description {
           font-family: "Karla", sans-serif;
           font-size: 20px;
-          background-color:#eee2df ;
-          border-radius: 40px;
-          border: 10px solid #c89f9c;
-          padding: 50px auto;
-          margin: 50px auto;
+          display:block;
+}
+
+.box {
+          box-shadow: inset -20px -30px 40px 5px rgba(75, 71, 68, 0.1);
 }
 
 #sky-description {
