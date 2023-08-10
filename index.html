@@ -26,60 +26,69 @@
 
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>Weather Forecast</h1>
-        <br />
-        <div id="search input-form">
-          <form action="submit">
-            <input
-              type="text"
-              name="searchInput"
-              id="searchInput"
-              placeholder="Enter location"
-              autocomplete="off"
-              autofocus="on"
-            />
-            <button id="search">Search</button>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  class="form-control"
+                  id="city-input"
+                  placeholder="Enter location"
+                  autocomplete="off"
+                  autofocus="on"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
           </form>
-        </div>
-        <br />
-        <div class="d-flex weather-temperature">
+          <div class="overview">
+            <h2 id="city"></h2>
+            <ul>
+              <li>Last Updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
           <div class="row">
             <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong>
+                  <span class="units">
+                    <a href="#" id="celsius-convert" class="active">°C</a>|
+                    <a href="#" id="fahrenheit-convert">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
               <ul>
-              <li><h2 id="weather-data">Current Weather</h2></li>
-              <li id="date"></li>
-              <li id="icon-weather">
-                <i class="bi bi-sun-fill"></i>
-              </li>
-              <li id="sky-description">Clear</li>
-              <li id="temperature"></li>
-              <li id="grades-units">
-                <a href="#" id="celsius-convert">°C</a>|<a
-                href="#"
-                id="fahrenheit-convert"
-                >°F</a>
-              </li>
-            </ul>
+                <li>Humidity: <span id="'humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>km/h</li>
+              </ul>
+            </div>
           </div>
-          </div>
-          <div class="content-box">
-            <div class="col-6" id="weather-description">
-            <ul>
-              <li>Precipitation:0%</li>
-              <li>Humidity:3%</li>
-              <li>Wind:2 km/h</li>
-            </ul>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
+          <footer>
+            <p id="author">
+              <a
+                href="https://github.com/maryluzmeva/WeatherApp.git"
+                target="_blank"
+                >Open-source code</a
+              >
+              by 👩‍💻 Maryluz
+            </p>
+          </footer>
         </div>
-        <hr />
       </div>
-      <footer>
-        <p id="author">
-          <a href="https://github.com/maryluzmeva/WeatherApp.git" target="_blank">Open-source code</a>
-          by 👩‍💻 Maryluz
-        </p>
-      </footer>
       <script src="src/script.js"></script>
     </div>
   </body>
