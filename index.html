@@ -26,46 +26,46 @@
 
   <body>
     <div class="container">
-      <h1>Weather Forecast</h1>
-      <br />
-      <div id="search input-form">
-        <form action="submit">
-          <input
-            type="text"
-            name="searchInput"
-            id="searchInput"
-            placeholder="Enter location"
-            autocomplete="off"
-            autofocus="on"
-          />
-          <button id="search">Search</button>
-        </form>
+      <div class="weather-app">
+        <h1>Weather Forecast</h1>
+        <br />
+        <div id="search input-form">
+          <form action="submit">
+            <input
+              type="text"
+              name="searchInput"
+              id="searchInput"
+              placeholder="Enter location"
+              autocomplete="off"
+              autofocus="on"
+            />
+            <button id="search">Search</button>
+          </form>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-6">
+            <ul class="icon-weather">
+            <h2>Current Location</h2>
+            <li id="date"></li>
+            <li><i class="bi bi-sun-fill"></i></li>
+            <li class="grades-units">
+            <a href="#" id="celsius-convert">°C</a>|<a
+              href="#"
+              id="fahrenheit-convert"
+              >°F</a
+            ></li>
+            </ul>
+          </div>
+          <div class="col-6" id="weather-description">
+            <ul>
+              <li>Precipitation:0%</li>
+              <li>Humidity:3%</li>
+              <li>Wind:2 km/h</li>
+            </ul>
+          </div>
+        <hr />
       </div>
-      <br />
-      <div id="weatherData">
-        <h2>Current Location</h2>
-      </div>
-      <br />
-      <span class="icon-weather">
-        <i class="bi bi-sun-fill"></i>
-      </span>
-
-      <br />
-
-      <span class="grades-units">
-        <a href="#" id="celsius-convert">°C</a>|<a
-          href="#"
-          id="fahrenheit-convert"
-          >°F</a
-        >
-      </span>
-
-      <br />
-
-      <span id="date"> </span>
-
-      <hr />
-
       <footer>
         <p id="author">
           <a href="https://github.com/maryluzmeva/WeatherApp.git"

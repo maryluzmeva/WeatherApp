@@ -58,21 +58,6 @@ form {
           padding-bottom: 20px;
 }
 
-.col-2 {
-          text-align: center;
-          margin: 0 auto;
-          padding: 6px;
-          background-color: #eed7c5;
-          border-radius: 14px;
-          border-color: #b36a5e;
-}
-
-.emoji {
-          text-align: left;
-          color: #cb997e;
-          font-size: 24px;
-}
-
 .icon-weather {
           text-align: center;
           color: #eee2df;
@@ -83,6 +68,7 @@ form {
 .grades-units {
           display: block;
           text-align: center;
+          font-size: 16px;
 }
 
 #date {
@@ -110,4 +96,18 @@ form {
           display:block;
           font-family: "Karla", sans-serif;
           font-size: 14px;
+}
+
+ul {
+          list-style: none;
+}
+
+#weather-description {
+          font-family: "Karla", sans-serif;
+          font-size: 20px;
+          background-color:#eee2df ;
+          border-radius: 40px;
+          border: 10px solid #c89f9c;
+          padding: 50px auto;
+          margin: 50px auto;
 }
