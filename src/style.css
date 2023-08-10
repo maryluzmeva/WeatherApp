@@ -16,25 +16,10 @@ h1 {
           border-radius: 35px;
 }
 
-h2,
-h4,
-h5 {
+h2{
           text-align: center;
 }
 
-h3 {
-          font-family: "Karla", sans-serif;
-          font-size: 25px;
-          text-align: center;
-          display: block;
-}
-
-h5 {
-          font-family: "Karla", sans-serif;
-          font-size: 18px;
-          display: block;
-          padding: 6px;
-}
 
 #search {
           font-family: "Karla", sans-serif;
