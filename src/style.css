@@ -58,14 +58,14 @@ form {
           padding-bottom: 20px;
 }
 
-.icon-weather {
+#icon-weather {
           text-align: center;
           color: #eee2df;
           display: block;
           font-size: 50px;
 }
 
-.grades-units {
+#grades-units {
           display: block;
           text-align: center;
           font-size: 16px;
@@ -110,4 +110,11 @@ ul {
           border: 10px solid #c89f9c;
           padding: 50px auto;
           margin: 50px auto;
+}
+
+#sky-description {
+          font-family: "Karla", sans-serif;
+          font-size: 25px;
+          display: block;
+          text-align: center;
 }
