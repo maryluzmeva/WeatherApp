@@ -1,6 +1,7 @@
 body {
           font-family: "Karla", sans-serif;
-}
+         
+} 
 
 h1 {
           color: #000000;
@@ -32,22 +33,21 @@ li:first-letter {
 .weather-app-wrapper {
           max-width: 600px;
           margin: 30px auto;
-          background-color: #cc8b86;
+           background-image: url("images/sky.jpg");
 }
 
 .weather-app {
           padding: 20px;
           border: 1px solid #dadde1;
-          border-radius: 5px;
+          border-radius: 5px; 
 }
 
 .overview {
           margin-bottom: 20px;
-          background-color: #f9eae1;
-          border-radius: 5px;
           margin: 20px;
           padding: 10px 15px;
           color: #000000;
+         
 }
 
 .weather-temperature img {
