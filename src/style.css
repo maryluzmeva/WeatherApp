@@ -30,10 +30,14 @@ li:first-letter {
           text-transform: capitalize;
 }
 
+#humidity, #wind {
+    background-color: #BFDBF7;
+}
+
 .weather-app-wrapper {
           max-width: 600px;
           margin: 30px auto;
-           background-image: url("images/sky.jpg");
+          background-image: url("../images/sky.jpg");
 }
 
 .weather-app {
@@ -57,7 +61,7 @@ li:first-letter {
 }
 
 .weather-temperature strong {
-          color:#f9eae1;
+          color:#022B3A;
           font-size: 64px;
           line-height: 1;
           font-weight: 400;
