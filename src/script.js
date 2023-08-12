@@ -99,11 +99,14 @@ function displayTemperature(response) {
   getForecast(response.data.coord);
 }
 
+navigator.geolocation.getCurrentPosition (displayTemperature);
+
 function search(city) {
   let apiKey = "3faac5a862ce9260b63bd4aaae035e7c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
+
 
 function handleSubmit(event) {
   event.preventDefault();
