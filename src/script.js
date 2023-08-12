@@ -96,7 +96,7 @@ function displayTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  iconElement.setAttribute("alt", response.data.daily.condition.icon_url);
+  iconElement.setAttribute("alt", response.data.condition.description);
 
   getForecast(response.data.coordinates);
 }
