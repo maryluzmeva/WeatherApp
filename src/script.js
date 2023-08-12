@@ -70,7 +70,7 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * (9 /5) + 32);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   celsiusLink.classList.remove("active");
