@@ -49,10 +49,10 @@ function displayForecast() {
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(
-            forecastDay.temp.max
+            forecastDay.temp.maximun
           )}° </span>
           <span class="weather-forecast-temperature-min"> ${Math.round(
-            forecastDay.temp.min
+            forecastDay.temp.minimum
           )}° </span>
         </div>
       </div>
@@ -67,7 +67,7 @@ function displayForecast() {
 
 function getForecast (coordinates){
   let apiKey = "c71f439f65td859373faeeba102o0222";
-  let apiUrl=`https://api.shecodes.io/weather/v1/forecast?long=${coordinates=longitude}&lat=${coordinates=latitude}&key=${apiKey}&units=metric`
+  let apiUrl=`https://api.shecodes.io/weather/v1/forecast?lon=${coordinates=longitude}&lat=${coordinates=latitude}&key=${apiKey}&units=metric`
   axios.get(apiUrl).then(displayForecast)
 }
 navigator.geolocation.getCurrentPosition (displayTemperature);
@@ -94,6 +94,8 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  getForecast (response.data.coordinates);
 }
 
 function search(city) {
@@ -124,8 +126,6 @@ function displayCelsiusTemperature(event) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }
-
-let celsiusTemperature = null;
 let fahrenheitTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
