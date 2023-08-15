@@ -30,33 +30,29 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function displayForecast(response) {
+function displayForecast() {
   let forecast = response.data.daily;
-
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      forecastHTML =
-        forecastHTML +
-        `
+    if (index <6) {
+    forecastHTML =
+      forecastHTML +
+      `
       <div class="col-2">
-        <div class="weather-forecast-date">${formatDay(forecastDay.time)}</div>
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <img
-          class="tempImg"
-          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons${
-            forecastDay.condition.icon}.png"
-          alt=""
+          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+          alt="forecast-icon"
           width="42"
-          class="forecast-image"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(
-            forecastDay.temperature.maximum
+            forecastDay.temp.max
           )}° </span>
           <span class="weather-forecast-temperature-min"> ${Math.round(
-            forecastDay.temperature.minimum
+            forecastDay.temp.min
           )}° </span>
         </div>
       </div>
@@ -67,6 +63,8 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+
 function getForecast (coordinates){
   let apiKey = "c71f439f65td859373faeeba102o0222";
   let apiUrl=`https://api.shecodes.io/weather/v1/forecast?long=${coordinates=longitude}&lat=${coordinates=latitude}&key=${apiKey}&units=metric`
@@ -83,7 +81,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
  
-  celsiusTemperature = response.data.temperature.current;
+  let celsiusTemperature = response.data.temperature.current;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.city;
