@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>☀️WeatherApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,6 +55,7 @@
               <li>Last Updated: <span id="date"></span></li>
               <li id="description"></li>
             </ul>
+          
           </div>
           <div class="row">
             <div class="col-6">
@@ -63,21 +64,21 @@
                 <div class="float-left">
                   <strong id="temperature"></strong>
                   <span class="units">
-                    <a href="#" id="celsius-convert" class="active">°C</a>|
-                    <a href="#" id="fahrenheit-convert">°F</a></span
+                    <a href="#" id="celsius-link" class="active">°C</a>|
+                    <a href="#" id="fahrenheit-link">°F</a></span
                   >
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: <span id="'humidity"></span>%</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span>km/h</li>
-              </ul>
+              </ul> 
             </div>
-          </div>
+          </div> 
           <div class="weather-forecast" id="forecast"></div>
-          <br />
+          <br /> 
         </div>
       </div>
     </div>
