@@ -79,6 +79,7 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let feelslikeElement =document.querySelector ("#feels-like");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
@@ -89,6 +90,7 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
+  feelslikeElement.innerHTML=Math.round (response.data.temperature.feels_like);
   dateElement.innerHTML = formatDate(response.data.time);
   iconElement.setAttribute(
     "src",
