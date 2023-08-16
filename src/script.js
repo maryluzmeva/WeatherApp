@@ -72,7 +72,6 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
-navigator.geolocation.getCurrentPosition (displayTemperature);
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
