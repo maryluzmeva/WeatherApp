@@ -34,7 +34,7 @@ li:first-letter {
 .weather-app-wrapper {
           max-width: 700px;
           margin: 30px auto;
-          background-image: url("../images/sky.jpg");
+          background-image: url("../images/pink-cloudy-sky.jpg");
           background-repeat: no-repeat;
           background-size:cover;
           
